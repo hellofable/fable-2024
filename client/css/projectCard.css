@@ -1,0 +1,30 @@
+.project-card {
+    border-radius: 5px;
+}
+
+.project-card .btn-link {
+    color: grey;
+}
+
+/* light */
+body.light .project-card,
+body.light .btn-project-card {
+    background: var(--light-one);
+}
+
+body.light .project-card:hover,
+body.light .btn-project-card:hover {
+    background: var(--light-two);
+
+}
+
+/* dark */
+body.dark .project-card,
+body.dark .btn-project-card {
+    background: rgb(86, 86, 86);
+}
+
+body.dark .project-card:hover,
+body.dark .btn-project-card:hover {
+    background: rgb(116, 116, 116);
+}

@@ -1,0 +1,8 @@
+#top-nav {
+    background: rgba(0, 0, 200, 0.4)
+}
+
+body.light #top-nav,
+a {
+    color: unset
+}

@@ -1,18 +1,5 @@
 <script>
     export let _state;
-
-    $: if ($_state.view.darkMode) setDark();
-    $: if (!$_state.view.darkMode) setLight();
-
-    function setDark() {
-        document.documentElement.removeAttribute("data-bs-theme", "light");
-        document.documentElement.setAttribute("data-bs-theme", "dark");
-    }
-
-    function setLight() {
-        document.documentElement.removeAttribute("data-bs-theme", "dark");
-        document.documentElement.setAttribute("data-bs-theme", "light");
-    }
 </script>
 
 <a

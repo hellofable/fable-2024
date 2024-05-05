@@ -5,7 +5,7 @@
     import { Meteor } from "meteor/meteor";
 
     let schema = yup.object().shape({
-        title: yup.string().required().max(30).label("Project Title"),
+        title: yup.string().required().max(55).label("Project Title"),
     });
 
     let fields = { title: "", synopsis: "", imageUrl: "" };

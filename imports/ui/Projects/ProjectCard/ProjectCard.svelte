@@ -8,7 +8,7 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div on:click={openProject} class="card p-1">
+<div on:click={openProject} class="project-card p-1">
     <div class="card-body p-0 mt-2">
         <h5 class="card-subtitle px-2">{project.title}</h5>
         <p class="card-text p-2">
@@ -35,7 +35,7 @@
         line-height: 1.2;
     }
 
-    .card:hover {
+    .project-card:hover {
         cursor: pointer;
     }
 </style>

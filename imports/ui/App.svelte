@@ -2,10 +2,17 @@
   import { Route, router } from "tinro";
   import TopNav from "./TopNav/TopNav.svelte";
   import Projects from "./Projects/Projects.svelte";
-  import { _state } from "../code/state";
   import Modal from "/imports/ui/Modal/Modal.svelte";
 
+  import { setBodyClasses } from "../code/setBodyClasses";
+  import { _state } from "../code/state";
+  import { onMount } from "svelte";
+
   router.mode.hash(); // enables hash navigation method
+
+  onMount(() => {
+    setBodyClasses();
+  });
 </script>
 
 <Route>

@@ -8,7 +8,7 @@
     }
 </script>
 
-<button on:click={newScript} class="btn btn-info">
+<button on:click={newScript} class="btn btn-project-card">
     <div class="text-center">
         <div class="d-flex align-items-center">
             <div />
@@ -24,6 +24,5 @@
         min-height: 180px;
         font-size: 22px;
         border: 0;
-        opacity: 0.2;
     }
 </style>
