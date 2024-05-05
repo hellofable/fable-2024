@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import Editor from "./Editor-x/Editor.svelte";
+    import Editor from "./Editor/Editor.svelte";
 
     import { makeScriptFromCardsArr } from "/imports/code/cards/makeScriptFromCardsArr";
     import { splitFountainToCards } from "/imports/code/cards/splitFountainToCard";
@@ -18,7 +18,7 @@
                 script = data;
                 const cards = splitFountainToCards(script);
                 const html = makeScriptFromCardsArr(cards);
-                script = html;
+                // script = html;
             })
             .catch((error) => {
                 console.error("Error fetching the text file:", error);

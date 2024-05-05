@@ -1,9 +1,11 @@
 <script>
-	import { defaultExtensions } from "./code/defaultExtenstions";
+	import { defaultExtensions } from "./code/plugins/defaultExtenstions";
+	import { schema } from "./code/schema.js";
 	import { Editor } from "@tiptap/core";
 
 	import { onMount } from "svelte";
 	onMount(() => {
+		console.log(script);
 		initEditor(script);
 	});
 
@@ -16,7 +18,7 @@
 	function initEditor(html) {
 		editor = new Editor({
 			element: element,
-			extensions: defaultExtensions,
+			extensions: [...schema, ...defaultExtensions],
 			content: script,
 			parseOptions: {
 				preserveWhitespace: true,
