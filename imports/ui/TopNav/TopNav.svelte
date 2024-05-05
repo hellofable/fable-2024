@@ -5,43 +5,39 @@
     let showMenu;
 
     import DarkModeToggle from "./DarkModeToggle.svelte";
+    import SidebarToggle from "./SidebarToggle.svelte";
+    import UserDropdown from "./UserDropdown.svelte";
 
     // show menu only on pages that start with /project
     $: showMenu = $route.url.startsWith("/project/") ? true : false;
 </script>
 
-<div id="top-nav" class="w-100 py-2 px-3 shadow-sm">
-    <div class="d-flex text-secondary align-items-center">
-        <div class="">
+<div id="top-nav" class="w-100 py-2 px-3 shadow-sm no-select">
+    <div class="d-flex align-items-center">
+        <div id="menu-toggle" class="icons">
             {#if showMenu}
-                <i class="bi bi-list"></i>
+                <SidebarToggle {_state}></SidebarToggle>
             {/if}
         </div>
         <div class="flex-grow-1 text-center">
             <a href="/projects" class="pico-color-grey-800 fable-title">Fable</a>
         </div>
-        <div class="right-icons">
+        <div class="icons">
             <DarkModeToggle {_state}></DarkModeToggle>
-            <i class="bi bi-person-circle"></i>
+            <UserDropdown {_state} />
         </div>
     </div>
 </div>
 
 <style>
+    #menu-toggle {
+        width: 60px;
+    }
+
     .fable-title {
         font-size: 29px;
         text-decoration: none;
         font-family: "Satisfy", cursive;
         color: white;
-    }
-
-    .right-icons {
-        font-size: 22px;
-        color: white;
-    }
-
-    .bi-list {
-        font-size: 19px;
-        color: rgb(177, 153, 153);
     }
 </style>

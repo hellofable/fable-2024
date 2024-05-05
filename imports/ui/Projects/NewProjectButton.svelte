@@ -25,4 +25,8 @@
         font-size: 22px;
         border: 0;
     }
+
+    .bi-plus-circle {
+        opacity: 0.3;
+    }
 </style>

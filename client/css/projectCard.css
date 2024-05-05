@@ -4,7 +4,7 @@
 
 .project-card .btn-link,
 .project-card .btn-link:hover,
-.project-card .btn-link:first-child:active {
+.project-card .btn-link:active {
     color: grey !important
 }
 

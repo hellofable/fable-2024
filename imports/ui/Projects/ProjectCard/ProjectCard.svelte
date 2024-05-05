@@ -2,8 +2,10 @@
     export let project;
     import ProjectCardDropdown from "./ProjectCardDropdown.svelte";
 
+    import { router } from "tinro";
+
     function openProject() {
-        console.log("open");
+        router.goto(`/project/${project._id}`);
     }
 </script>
 

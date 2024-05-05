@@ -2,6 +2,7 @@
   import { Route, router } from "tinro";
   import TopNav from "./TopNav/TopNav.svelte";
   import Projects from "./Projects/Projects.svelte";
+  import Project from "./Project/Project.svelte";
   import Modal from "/imports/ui/Modal/Modal.svelte";
 
   import { setBodyClasses } from "../code/setBodyClasses";
@@ -15,27 +16,24 @@
   });
 </script>
 
-<Route>
-  <Modal {_state}></Modal>
+<Modal {_state}></Modal>
 
-  <div id="layout">
-    <div id="layout-top-nav">
+<div id="layout">
+  <div id="layout-content">
+    <Route path="/projects/*">
       <TopNav {_state} />
-    </div>
-    <div id="layout-content">
       <Projects {_state} />
-    </div>
+    </Route>
+    <Route path="/project/*">
+      <Project {_state} />
+    </Route>
   </div>
-</Route>
+</div>
 
 <style>
-  #layout {
+  #layout,
+  #layout-content {
     height: 100vh;
     overflow: hidden;
-  }
-
-  #layout-content {
-    height: 100%;
-    overflow-y: auto;
   }
 </style>

@@ -2,7 +2,8 @@
     background: rgba(0, 0, 200, 0.4)
 }
 
-body.light #top-nav,
-a {
-    color: unset
+
+
+#top-nav .bi {
+    font-size: 22px !important;
 }

@@ -1,0 +1,10 @@
+body.dark .modal-backdrop {
+    opacity: 0.8 !important;
+}
+
+
+
+body.light .modal-backdrop {
+
+    opacity: 0.5 !important;
+}
