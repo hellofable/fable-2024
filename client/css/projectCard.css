@@ -2,8 +2,10 @@
     border-radius: 5px;
 }
 
-.project-card .btn-link {
-    color: grey;
+.project-card .btn-link,
+.project-card .btn-link:hover,
+.project-card .btn-link:first-child:active {
+    color: grey !important
 }
 
 /* light */
